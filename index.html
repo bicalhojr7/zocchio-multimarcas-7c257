@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZOCCHIO | Excellence in Premium Clothing</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#191917",
+                        "surface-dim": "#ddd9d8",
+                        "on-background": "#1c1b1b",
+                        "secondary-container": "#dce2f3",
+                        "primary-container": "#2d2d2d",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container": "#f1edec",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-primary": "#c8c6c6",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#1b1c1c",
+                        "surface-container-highest": "#e5e2e1",
+                        "background": "#fdf8f8",
+                        "primary": "#181919",
+                        "on-secondary-container": "#5e6572",
+                        "on-error": "#ffffff",
+                        "outline": "#747878",
+                        "on-primary-fixed-variant": "#474747",
+                        "primary-fixed": "#e4e2e1",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#c8c6c6",
+                        "on-surface-variant": "#444748",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f7f3f2",
+                        "surface-tint": "#5f5e5e",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface": "#fdf8f8",
+                        "tertiary-container": "#2e2d2b",
+                        "secondary-fixed-dim": "#c0c7d6",
+                        "secondary-fixed": "#dce2f3",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "surface-bright": "#fdf8f8",
+                        "on-secondary-fixed": "#151c27",
+                        "on-secondary-fixed-variant": "#404754",
+                        "on-tertiary-container": "#979491",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#484644",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#ebe7e7",
+                        "tertiary-fixed": "#e6e2de",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#585f6c",
+                        "on-primary-container": "#959494",
+                        "tertiary-fixed-dim": "#c9c6c3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "caption": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #fdf8f8;
+            color: #181919;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-display-lg font-bold tracking-tighter text-primary">ZOCCHIO</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md uppercase tracking-widest text-primary border-b border-primary pb-1" href="#">Collections</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-secondary hover:text-primary transition-colors" href="#">Personalized Service</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden sm:inline-flex bg-primary-container text-white px-6 py-2 font-label-md text-label-md uppercase tracking-widest hover:bg-primary transition-all duration-300" href="https://wa.me/5511952431703" target="_blank">
+                    Contact via WhatsApp
+                </a>
+<button class="text-primary hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover object-center scale-105 transition-transform duration-[10s] hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiGHRyf-9ihyFzHTT1p-23CJPBSxdxn71j0GSwXO8c9kGeC8EG6vKscY4t6T_2FHrudoelDaCZGAY6Z7WQqatxT_ewIWDTyIjFD9H7Ifxrn4FsPugdHboSBnNN3X0cNvgS8FgggLt0hM16U2PEeOh67DXoBYwfH82fhXBuMewGjrK5AAPW7fFVykdaxhcIBjN3I03MK4guFyl9IMzymcvwulyU7JzDBpvEwyHHdC5YOrv_KEZMh936RLUpZDX-7CuMCNgEUHi_LbOM"/>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-white">
+<div class="max-w-2xl reveal-on-scroll">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">
+                    Profissionalismo e excelência em cada detalhe.
+                </h1>
+<p class="font-body-lg text-body-lg mb-10 text-white/90 leading-relaxed">
+                    Uma curadoria exclusiva de marcas premium para quem busca qualidade comprovada e atendimento personalizado.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-white text-primary px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-surface-variant transition-colors text-center" href="#categories">
+                        Explorar Coleções
+                    </a>
+<a class="border border-white/50 backdrop-blur-sm text-white px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-white/10 transition-colors text-center" href="#">
+                        Saiba Mais
+                    </a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Categories Grid (Product Showcase) -->
+<section class="py-24 bg-background" id="categories">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-xl">
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] text-secondary mb-4 block">Curadoria Exclusiva</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Nossos Universos</h2>
+</div>
+<div class="w-full md:w-auto h-px bg-outline-variant/30 flex-grow mx-8 hidden md:block"></div>
+<a class="font-label-md text-label-md uppercase tracking-widest border-b border-primary pb-1 shrink-0" href="#">Ver Tudo</a>
+</div>
+<!-- Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured -->
+<div class="md:col-span-8 group relative overflow-hidden h-[600px] reveal-on-scroll">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated medium shot of a high-end masculine clothing collection featuring tailored blazers and cashmere sweaters in a minimalist architectural studio. The lighting is soft and directional, highlighting the premium fabric textures. The color palette is dominated by deep graphite, charcoal, and warm cream tones, reflecting an atmosphere of quiet luxury and professional excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJLj8x5H5byZVV-2AqiLriwEXrZh1MUudigPQMTZpbx6wx1NR_bW9fPXQLUwaDaUp3HcY6eRykezNGPucPrNgWSgUZwEnMo6F4ebA-7Z1uzJchlxGHVbz1fhVYyC2YATy3-qqFLqJ13_U0tcYzhys9LimyoNfmLPEzr45Awn189A3pP2bKymSe8Jt-sqWTJFHQvKGQNhZ9K9vJHQZub4O6XH4LhL5mnB8T8R7plJvNjusqPL0fGVyMYXucxWQOjqvi5zhc59REW5MU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-headline-md mb-2">Coleção Masculina</h3>
+<p class="font-label-md text-label-md uppercase tracking-widest opacity-80">Alfaiataria e Casual Premium</p>
+</div>
+</div>
+<!-- Small Vertical -->
+<div class="md:col-span-4 group relative overflow-hidden h-[600px] reveal-on-scroll" style="transition-delay: 200ms;">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up artistic shot of premium fashion accessories, including a handcrafted leather watch and minimalist jewelry, arranged on a sleek marble surface. The lighting is bright and clean, emphasizing sharp edges and polished finishes. The overall aesthetic is modern, architectural, and exclusive, utilizing a high-contrast palette of white and deep black shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKxKz87kwHexz-8_67OpL1hXdQhdtJSc6il8-p6t0w_LXjaCp-oUQ4vHjOuzVcY0F-OgN_mal6FfFdtDYnsYCXtk0ruSwDe0_u_xRSyAs39ET0R_K2v9uRXu_R3y0pCByuHeTWwNtpxPV6xZvhKXYGGaqGjFVbxnAFHzpuTmKmRuWdB5bXpKwvVt5hOhH7kROJkLKBjSlU0FP5cLidt6jRiT4AxLYbXHF2w0d4D9U3kOJ3LcKRtc93P-09FD9vUtrM463m7jepGdpy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-headline-md mb-2">Acessórios</h3>
+<p class="font-label-md text-label-md uppercase tracking-widest opacity-80">Detalhes que Definem</p>
+</div>
+</div>
+<!-- Second Row -->
+<div class="md:col-span-4 group relative overflow-hidden h-[500px] reveal-on-scroll">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An elegant female silhouette wearing a flowing silk dress in ivory white, standing in a sunlit gallery with concrete walls. The mood is ethereal yet grounded, capturing the essence of contemporary classic style. The light is diffused, creating a serene and spacious atmosphere that emphasizes the quality and movement of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW5YllkjHyabUAIzKjkr19_0hQRAmeA7zJKIlY4PZvsUqgsQC8FWdXXA7R3_KnDltJ8x1SFNf3C49PcxCtMsJY8RmeJK8q848XEzuedDccDnifElRcnD4KFO7vh4vw_bLI_zm1ztnKGCTr7LvAPjrbJagzxu0hvbO12wofFiHdcS3X9bmitE_knryztMdSeoxQbXNvBsBZuUabrYHujLE0XoyQTMQb0zAgQd5m_kue1OogOxHCwPP1eeW1dC7YKWnACn3aWC5YuxdX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-headline-md mb-2">Coleção Feminina</h3>
+<p class="font-label-md text-label-md uppercase tracking-widest opacity-80">Elegância Atemporal</p>
+</div>
+</div>
+<div class="md:col-span-8 group relative overflow-hidden h-[500px] reveal-on-scroll" style="transition-delay: 200ms;">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide-angle shot of a high-end retail boutique interior featuring the 'New Arrivals' section. Sleek metal racks hold minimalist garments in neutral tones, punctuated by a vibrant red accent piece. The space is bright and open, with architectural lines and soft natural lighting. The atmosphere is quiet, exclusive, and sophisticated, embodying the premium brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9DCa9_7RXQKIPOkE1gMlTi3jZm0z0YzPq3b4MbYrVjwSNe90zx81iafqSdue9uaazNPG0sTFqBEjj43lrYKMH_VUw4q7fiSA0OJvsLNa2RHtLIpiVIRUTry0XOpUNkMO4oZ-TzzNrzX_-AV4HW0SV1TDRJpAMBgz658jtGyV9ep7TdXQd-wu9g5MwX77YDhyXsUB6BehQJpgGnTtseC90FJChDSVsG0uskp9yBGCa6d8dW26Fk35AJoU25lZCvBCz08HeWpO_AxEp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<h3 class="font-headline-md text-headline-md mb-2">Novidades</h3>
+<p class="font-label-md text-label-md uppercase tracking-widest opacity-80">O Último Grito do Luxo</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Section -->
+<section class="py-24 bg-surface-container border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="reveal-on-scroll">
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] text-secondary mb-6 block">Personalizado para Você</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
+                        Atendimento Personalizado
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">
+                        Conte com a consultoria de quem entende de estilo e qualidade. Na Zocchio, transformamos a compra em uma experiência de curadoria para o seu guarda-roupa.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md">Consultoria de Imagem e Estilo</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md">Seleção Exclusiva de Marcas Europeias</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md">Atendimento VIP em Loja Física ou Online</span>
+</li>
+</ul>
+</div>
+<div class="relative reveal-on-scroll" style="transition-delay: 300ms;">
+<div class="aspect-square bg-white p-8">
+<img class="w-full h-full object-cover" data-alt="A portrait of a professional style consultant assisting a client in a luxurious dressing room. The consultant is holding a refined charcoal suit jacket, showing the fabric quality. The environment is bright and upscale, with warm wooden details and minimalist furniture. The lighting is sophisticated, creating a welcoming and exclusive service atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAmyjadas1ptzR4tUChCv1Qu6krMpzlTmxmdJzQYcOkN8etRgyz0ybNDVr2qQ46kmhDyjjkaT-vLIO1UPFJk78iCOt9qAy3sY16cjqgnUgjFcEav57gXBjpGepfYZ672AcsQMHseSrPyhjO4qLzuu4Iq69i5Ca2_3ndEuVpLCmJb3o59PqCRgfEsLoTTEH5Awt9rAUqHYzPzhYCX_drdcaYlwY4GwBK-ZDMBO4Ofj3Ms-R2OKAr47ez3vvLL_JQ41MMda-bBAjcFBf"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-primary text-white p-10 hidden lg:block">
+<div class="font-display-lg text-display-lg leading-none mb-2">15+</div>
+<div class="font-label-md text-label-md uppercase tracking-widest">Anos de Experiência</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-32 bg-primary text-white text-center">
+<div class="max-w-4xl mx-auto px-margin-mobile reveal-on-scroll">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-12">
+                Sinta a exclusividade de perto.
+            </h2>
+<div class="space-y-6">
+<p class="font-headline-md text-headline-md mb-8">
+                    Visite nossa loja ou entre em contato pelo WhatsApp (11) 95243-1703
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="bg-[#8C7851] text-white px-12 py-5 font-label-md text-label-md uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-3" href="https://wa.me/5511952431703" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                        Iniciar Conversa
+                    </a>
+<a class="border border-white/30 text-white px-12 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-3" href="#">
+<span class="material-symbols-outlined">location_on</span>
+                        Ver Endereço
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto text-left">
+<div class="md:col-span-4 space-y-6">
+<div class="font-display-lg text-headline-md font-bold text-on-tertiary">ZOCCHIO</div>
+<p class="font-body-md text-body-md text-on-tertiary-container max-w-xs">
+                    Curadoria premium para o homem e a mulher que valorizam o atemporal.
+                </p>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-on-tertiary">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Home</a></li>
+<li><a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Coleções</a></li>
+<li><a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Sobre Nós</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-on-tertiary">Customer Care</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-on-tertiary">Contact</h4>
+<ul class="space-y-2">
+<li class="font-body-md text-body-md text-on-tertiary-container underline">WhatsApp: (11) 95243-1703</li>
+<li class="font-body-md text-body-md text-on-tertiary-container">E-mail: contato@zocchio.com.br</li>
+<li class="font-body-md text-body-md text-on-tertiary-container">São Paulo, SP</li>
+</ul>
+</div>
+<div class="md:col-span-12 border-t border-white/10 pt-8 mt-4">
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-tertiary-container">
+                    © 2024 Zocchio Multimarcas. Excellence in Premium Clothing.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple reveal on scroll observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Navigation background opacity on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
